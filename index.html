@@ -40,13 +40,29 @@ ANCHOR then work on Images
 
 	<div>
 		A Todo List
-		<div id="todo-error"></div>
-		<form onsubmit=""></form>
-		<div id="todos"></div>
-	</div>
+		<!-- //NOTE just like in cars for the add car button make a form to take in put to make a todo card! then add the options to check off that the to do is done! -->
 
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.js"></script>
-	<script type="module" src="app/main.js"></script>
+		<div id="do-it-to-it" class="row">
+
+			<div class="col-ms-4 card border border-dark">
+				<div class="card-body">
+					<p class="card-text"> TOOO-DOOO.</p>
+				</div>
+				<!-- TODO two buttons or one? -->
+				<div class="btn-group-toggle" data-toggle="buttons">
+					<label class="btn btn-primary">
+						<input type="checkbox"> Done
+					</label>
+
+				</div>
+			</div>
+			<div id="todo-error"></div>
+			<form onsubmit=""></form>
+			<div id="todos"></div>
+		</div>
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.js"></script>
+		<script src="app/main.js" type="module"></script>
 </body>
 
 </html>

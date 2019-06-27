@@ -3,7 +3,15 @@ import TodoService from "./todo-service.js";
 const _todoService = new TodoService()
 
 function _drawTodos() {
-	//WHAT IS MY PURPOSE?
+	//WHAT IS MY PURPOSE? answer: to draw the todos on the page
+	// NOTE if the todos in this section are always red check if the need an S at the end or no S at the end
+	let todoElem = document.querySelector("#do-it-to-it")
+	let template = ''
+	let mytodos = _todoService.Todo
+	todo.forEach(todo => {
+		template += todo.Template
+	})
+	todoElem.innerHTML = template
 }
 
 function _drawError() {
@@ -21,8 +29,10 @@ export default class TodoController {
 
 	addTodo(e) {
 		e.preventDefault()
-		var form = e.target
-		var todo = {
+		let form = e.target
+		let todo = {
+			title: form.title.value,
+			description: form.description.value
 			// DONT FORGET TO BUILD YOUR TODO OBJECT
 		}
 
