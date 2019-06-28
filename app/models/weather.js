@@ -9,4 +9,20 @@ export default class Weather {
     this.city = data.name
     this.kelvin = data.main.temp
   }
+
+  get Template() {
+    return `
+
+    		<div class="row">
+			<div class="col-ms-4">
+				<div class="card-body">
+					
+				</div>
+			</div>
+		</div>
+
+	</div>
+    `
+  }
 }
+

@@ -38,15 +38,15 @@ export default class TodoController {
 
 		_todoService.addTodo(todo)
 	}
-
-	toggleTodoStatus(todoId) {
-		// asks the service to edit the todo status
-		_todoService.toggleTodoStatus(todoId)
-	}
 	//NOTE START HERE FOR DELETEING A TODO
 	removeTodo(todoId) {
 		// ask the service to run the remove todo with this id
 		_todoService.removeTodo(todoId)
+	}
+
+	toggleTodoStatus(todoId) {
+		// asks the service to edit the todo status
+		_todoService.toggleTodoStatus(todoId)
 	}
 
 

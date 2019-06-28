@@ -5,10 +5,12 @@
 export default class Todo {
   constructor(data) {
     console.log("eh to dos?")
+    this.user = data.user
+    this.completed = data.completed
+    this._id = data._id
 
-    this.description = data.description;
+    this.description = data.description || '';
 
-    this.todoId = data.todoId;
 
 
 
@@ -17,10 +19,20 @@ export default class Todo {
 
 
     return `
-  <ul>
-  <li>${this.description}</li>
-  </ul>
-	<button class="btn btn-sm btn-secondary" onclick="app.controllers.todoController.removeTodo('${this.todoId}')">Task Complete</button>
+  <div class="row text-center">
+	<div class=" d-flex col-ms-4 border border-dark">
+		<div class="card">
+			<div class="card-body">
+      <p class="border border-dark">
+      <li>${this.description}</li>
+      </p>
+      <button class="btn btn-sm btn-secondary" onclick="app.controllers.todoController.removeTodo('${this._id}')">Task Complete</button>
+      
+				
+			</div>
+		</div>
+	</div>
+</div>
     
     `
   }

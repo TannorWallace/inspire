@@ -32,43 +32,44 @@ ANCHOR then work on Images
 	<div id="weather">
 		Your Weather Template
 
-	</div>
 
-	<div id="quote">
-		The Quote
-	</div>
-
-	<div>
-		A Todo List
-		<h1 class="text-center">WORK ON THE TODOS ONLY!
-			<ul>
-				<li>ADD TODO IS WORKING</li>
-				<li>NOW WORK ON DELETEING A TODO</li>
-			</ul>
-
-		</h1>
-
-		<!-- //NOTE just like in cars for the add car button make a form to take in put to make a todo card! then add the options to check off that the to do is done! -->
-		<div class="container-fluid">
-			<div class="row">
-				<!-- TODO two buttons or one? -->
-				<div class="col-ms-4 card border border-dark">
-					<form onsubmit="app.controllers.todoController.addTodo(event)">
-						<div class="card-body">
-							<label for="text">To do?</label>
-							<input type="text" name="description" placeholder="whatcha wanna do?">
-						</div>
-						<button type="submit" class="btn btn-sm btn-warning">
-							Add Task </button>
-					</form>
-				</div>
-			</div>
+		<div id="quote">
+			The Quote
 		</div>
 
-		<!-- <div id=" todo-error">
+		<div>
+			A Todo List
+			<h1 class="text-center">WORK ON THE TODOS ONLY!
+				<ul>
+					<li><strike>ADD TODO IS WORKING</strike></li>
+					<li><strike>NOW WORK ON DELETEING A TODO</strike></li>
+					<li>Deletes are working</li>
+					<li><u>NOW WORK ON LINKING ALL THE APIS</u></li>
+				</ul>
+
+			</h1>
+
+			<!-- //NOTE just like in cars for the add car button make a form to take in put to make a todo card! then add the options to check off that the to do is done! -->
+			<div class="container-fluid">
+				<div class="row">
+					<!-- TODO two buttons or one? -->
+					<div class="col-ms-4 card border border-dark">
+						<form onsubmit="app.controllers.todoController.addTodo(event)">
+							<div class="card-body">
+								<label for="text">To do?</label>
+								<input type="text" name="description" placeholder="whatcha wanna do?">
+							</div>
+							<button type="submit" class="btn btn-sm btn-warning">
+								Add Task </button>
+						</form>
+					</div>
+				</div>
+			</div>
+
+			<!-- <div id=" todo-error">
 		</div> -->
-		<div id="do-it-to-it"></div>
-	</div>
+			<div id="do-it-to-it"></div>
+		</div>
 	</div>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.js"></script>
 	<script src="app/main.js" type="module"></script>

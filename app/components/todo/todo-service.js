@@ -25,14 +25,6 @@ export default class TodoService {
 		return _state.todos
 	}
 
-	// removeTodo(todoId) {
-	// 	_todoApi.delete(todoId)
-	// 		.then(res => {
-	// 			console.log(res.data.data)
-	// 			this.getTodos
-	// 		})
-	// 		.catch(err => console.error(err))
-	// }
 
 	addSubscriber(prop, fn) {
 		_subscribers[prop].push(fn)
@@ -65,15 +57,20 @@ export default class TodoService {
 	toggleTodoStatus(todoId) {
 		let todo = _state.todos.find(todo => todo._id == todoId)
 		todo.completed = !todo.completed
-		// Be sure to change the completed property to its opposite
-		// todo.completed = !todo.completed <-- THIS FLIPS A BOOL
-
 		_todoApi.put(todoId, todo)
 			.then(res => {
-				console.log(res.data)
-				//DO YOU WANT TO DO ANYTHING WITH THIS?
 				this.getTodos()
+				console.log(todo.completed)
 			})
+			// Be sure to change the completed property to its opposite
+			// todo.completed = !todo.completed <-- THIS FLIPS A BOOL
+
+			// _todoApi.put(todoId, todo)
+			// 	.then(res => {
+			// 		console.log(res.data)
+			// 		//DO YOU WANT TO DO ANYTHING WITH THIS?
+			// 		this.getTodos()
+			// 	})
 			.catch(err => _setState('error', err.response.data))
 	}
 
@@ -84,8 +81,10 @@ export default class TodoService {
 			.then(res => {
 				console.log(res.data.message)
 				this.getTodos()
+				// _setState('todos', res.data.data)
 			})
+
 			.catch(err => console.error(err))
 	}
-
 }
+
