@@ -1,4 +1,4 @@
-import Todo from "../../models/todo";
+import Todo from "../../models/todo.js";
 
 // @ts-ignore
 const todoApi = axios.create({
@@ -21,6 +21,9 @@ function _setState(prop, data) {
 }
 
 export default class TodoService {
+	get Todos() {
+		return _state.todos
+	}
 	get TodoError() {
 		return _state.error
 	}
@@ -33,9 +36,9 @@ export default class TodoService {
 		console.log("Getting the Todo List")
 		todoApi.get()
 			.then(res => {
-				// let myTodos = res.data.data
-				// let todo = myTodos.map(t => new Todo(t)
-				// 	_setState('todos',res.data.data)
+				let myTodos = res.data.data
+				let todo = myTodos.map(t => new Todo(t))
+				_setState('todos', todo)
 				// WHAT DO YOU DO WITH THE RESPONSE?
 			})
 			.catch(err => _setState('error', err.response.data))
@@ -52,12 +55,15 @@ export default class TodoService {
 
 	toggleTodoStatus(todoId) {
 		let todo = _state.todos.find(todo => todo._id == todoId)
+		todo.completed = !todo.completed
 		// Be sure to change the completed property to its opposite
 		// todo.completed = !todo.completed <-- THIS FLIPS A BOOL
 
 		todoApi.put(todoId, todo)
 			.then(res => {
+				console.log(res.data)
 				//DO YOU WANT TO DO ANYTHING WITH THIS?
+				this.getTodos()
 			})
 			.catch(err => _setState('error', err.response.data))
 	}

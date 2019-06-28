@@ -5,7 +5,7 @@
 export default class Todo {
   constructor(data) {
     console.log("eh to dos?")
-    this.title = data.title
+
     this.description = data.description
 
 
@@ -13,7 +13,10 @@ export default class Todo {
   }
   get Template() {
     return `
-    
+  <ul>
+  <li>${this.description}</li>
+  </ul>
+	
     
     `
   }

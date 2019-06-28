@@ -7,8 +7,8 @@ function _drawTodos() {
 	// NOTE if the todos in this section are always red check if the need an S at the end or no S at the end
 	let todoElem = document.querySelector("#do-it-to-it")
 	let template = ''
-	let mytodos = _todoService.Todo
-	todo.forEach(todo => {
+	let mytodos = _todoService.Todos
+	mytodos.forEach(todo => {
 		template += todo.Template
 	})
 	todoElem.innerHTML = template
@@ -16,7 +16,7 @@ function _drawTodos() {
 
 function _drawError() {
 	console.error('[TODO ERROR]', _todoService.TodoError)
-	//document.querySelector('#todo-error').textContent = `${_todoService.TodoError.message}`
+	// document.querySelector('#todo-error').textContent = `${_todoService.TodoError.message}`
 }
 
 
@@ -24,14 +24,13 @@ export default class TodoController {
 	constructor() {
 		_todoService.addSubscriber('error', _drawError)
 		_todoService.getTodos()
-		// Don't forget to add your subscriber
+		_todoService.addSubscriber('todos', _drawTodos)
 	}
 
 	addTodo(e) {
 		e.preventDefault()
 		let form = e.target
 		let todo = {
-			title: form.title.value,
 			description: form.description.value
 			// DONT FORGET TO BUILD YOUR TODO OBJECT
 		}
@@ -43,7 +42,7 @@ export default class TodoController {
 		// asks the service to edit the todo status
 		_todoService.toggleTodoStatus(todoId)
 	}
-
+	//NOTE START HERE FOR DELETEING A TODO
 	removeTodo(todoId) {
 		// ask the service to run the remove todo with this id
 		_todoService.removeTodo(todoId)
