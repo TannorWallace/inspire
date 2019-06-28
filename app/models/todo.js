@@ -8,7 +8,6 @@ export default class Todo {
     this.user = data.user
     this.completed = data.completed
     this._id = data._id
-
     this.description = data.description || '';
 
 
@@ -16,9 +15,8 @@ export default class Todo {
 
   }
   get Template() {
-
-
-    return `
+    if (this.completed == false) {
+      return `
   <div class="row text-center">
 	<div class=" d-flex col-ms-4 border border-dark">
 		<div class="card">
@@ -26,14 +24,39 @@ export default class Todo {
       <p class="border border-dark">
       <li>${this.description}</li>
       </p>
-      <button class="btn btn-sm btn-secondary" onclick="app.controllers.todoController.removeTodo('${this._id}')">Task Complete</button>
       
-				
+
+      <button class="btn btn-sm btn-success" onclick="app.controllers.todoController.toggleTodoStatus('${this._id}')">completed?</button>
+		
 			</div>
 		</div>
 	</div>
 </div>
     
     `
+
+    }
+    else {
+      return `
+    <div class="row text-center">
+	<div class=" d-flex col-ms-4 border border-dark">
+		<div class="card">
+			<div class="card-body">
+      <p class="border border-dark">
+      <li>${this.description}</li>
+      </p>
+      <button class="btn btn-sm btn-danger" onclick="app.controllers.todoController.removeTodo('${this._id}')">delete</button>
+
+			</div>
+		</div>
+	</div>
+</div>
+    
+    `
+    }
+
+
+
   }
+
 }

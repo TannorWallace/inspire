@@ -55,23 +55,14 @@ export default class TodoService {
 	}
 
 	toggleTodoStatus(todoId) {
+		// debugger
 		let todo = _state.todos.find(todo => todo._id == todoId)
 		todo.completed = !todo.completed
 		_todoApi.put(todoId, todo)
 			.then(res => {
 				this.getTodos()
 				console.log(todo.completed)
-			})
-			// Be sure to change the completed property to its opposite
-			// todo.completed = !todo.completed <-- THIS FLIPS A BOOL
-
-			// _todoApi.put(todoId, todo)
-			// 	.then(res => {
-			// 		console.log(res.data)
-			// 		//DO YOU WANT TO DO ANYTHING WITH THIS?
-			// 		this.getTodos()
-			// 	})
-			.catch(err => _setState('error', err.response.data))
+			}).catch(err => _setState('error', err.response.data))
 	}
 
 	removeTodo(todoId) {
