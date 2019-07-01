@@ -14,13 +14,6 @@ function _drawTodos() {
 	todoElem.innerHTML = template
 }
 
-//STUB Kenny says "WTF is this, you wont need this."
-// function _drawError() {
-// 	console.error('[TODO ERROR]', _todoService.TodoError)
-// 	// document.querySelector('#todo-error').textContent = `${_todoService.TodoError.message}`
-// }
-
-
 export default class TodoController {
 	constructor() {
 		// _todoService.addSubscriber('error', _drawError)
@@ -35,7 +28,7 @@ export default class TodoController {
 			description: form.description.value
 			// DONT FORGET TO BUILD YOUR TODO OBJECT
 		}
-
+		form.reset()
 		_todoService.addTodo(todo)
 	}
 	//NOTE START HERE FOR DELETEING A TODO
