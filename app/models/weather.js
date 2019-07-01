@@ -11,12 +11,16 @@ export default class Weather {
   }
 
   get Template() {
+    let kelvin = this.kelvin
+    let fahrenheit = (kelvin - 273.15) * (9 / 5) + 32
+
+
     return `
 
     		<div class="row">
 			<div class="col-ms-4">
 				<div class="card-body">
-					
+					<p>${this.city}: ${Math.round(fahrenheit)} &#176;F</p>
 				</div>
 			</div>
 		</div>

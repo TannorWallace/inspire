@@ -8,6 +8,7 @@ function _drawTodos() {
 	let todoElem = document.querySelector("#do-it-to-it")
 	let template = ''
 	let mytodos = _todoService.Todos
+	document.querySelector("#todoCounter").innerHTML = mytodos.length.toString()
 	mytodos.forEach(todo => {
 		template += todo.Template
 	})
