@@ -6,7 +6,7 @@ export default class Quote {
 
   get Template() {
     return `
-    	<div class="card">
+    	<div class="card quote-card">
 			<div class="card-body">
 				<blockquote class="blackquote mb-1">
           <p>"${this.text}"</p>

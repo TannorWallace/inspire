@@ -17,8 +17,8 @@ export default class Weather {
 
     return `
 
-    		<div class="row">
-			<div class="col-ms-4">
+    		<div class="row d-flex align-items-end"">
+			<div class="col-ms-4 >
 				<div class="card-body">
 					<p>${this.city}: ${Math.round(fahrenheit)} &#176;F</p>
 				</div>

@@ -17,12 +17,13 @@ export default class Todo {
   get Template() {
     if (this.completed == false) {
       return `
-  <div class="row text-center">
-	<div class=" d-flex col-ms-4 border border-dark">
+
+  <div class="row text-center ">
+	<div class=" d-flex col-ms-12">
 		<div class="card">
-			<div class="card-body">
-      <p class="border border-dark">
-      <li>${this.description}</li>
+			<div class="card-body todo-bg">
+      <p class="to-do-color">
+      ${this.description}
       </p>
       
 
@@ -38,12 +39,13 @@ export default class Todo {
     }
     else {
       return `
+      
     <div class="row text-center">
-	<div class=" d-flex col-ms-4 border border-dark">
+	<div class=" d-flex col-ms-12">
 		<div class="card">
-			<div class="card-body">
-      <p class="border border-dark">
-      <li>${this.description}</li>
+			<div class="card-body todo-bg">
+      <p class="to-do-color">
+      ${this.description}s
       </p>
       <button class="btn btn-sm btn-danger" onclick="app.controllers.todoController.removeTodo('${this._id}')">delete</button>
 

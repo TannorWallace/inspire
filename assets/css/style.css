@@ -1,4 +1,46 @@
-#todo-error{
-  color: red;
-  font-size: 2em;
+*{
+  font-family: 'Orbitron', sans-serif;
+  color: white;
+}
+
+
+
+#bg-image{
+  background-repeat: no-repeat;
+background-size: 100%;
+}
+
+.quote-card{
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.301)!important;
+  font-size: 25px;
+  color:white;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+ 
+}
+
+#weather{
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.185)!important;
+  text-align: end;
+  color: white;
+  font-size: 20px;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+
+.b-ground{
+  background-color: rgba(0, 0, 0, 0.301)!important;
+}
+
+span{
+  color: white;
+  background-color: rgba(0, 0, 0, 0.301)!important;
+}
+.to-do-color{
+    color: white;
+  background-color: rgba(0, 0, 0, 0.582)!important;
+}
+
+.todo-bg{
+  background-color: rgba(0, 0, 0, 0.582)!important;
 }

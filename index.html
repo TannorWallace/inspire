@@ -1,18 +1,3 @@
-<!-- //ANCHOR view each of the files and find a good starting point -->
-<!--
-	 ANCHOR look over the TODO section of the read me file and work on those FIRST
-	 ------remember the TODO section of this project is the tasks that a user will enter on the home screen. 
-	 I.E. TODO = eat some cheese? then display this on the screen!
-
-	 ANCHOR then work on weather
-ANCHOR then work on quotes
-ANCHOR then work on Images
-
-
-
--->
-
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -23,42 +8,45 @@ ANCHOR then work on Images
 	<title>Inspire</title>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
 		integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css?family=Orbitron&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="assets/css/style.css">
 </head>
 
-<body id="bg-image">
-
-
-	<div id="weather">
-		Your Weather Template
+<body id="bg-image" class="container-fluid">
+	<div class="row justify-content-center">
+		<div class="clock">
+			<iframe
+				src="http://free.timeanddate.com/clock/i6ty2lv6/n42/szw210/szh210/hoc00f/hbw0/hfc000/cf100/hgr0/fan3/facf00/mqcff0/mql6/mqw2/mqd74/mhcf90/mhl6/mhw6/mhd74/mmcf90/mml4/mmw1/mmd74/hwm1/hhcf90/hmcf90/hsc0f0"
+				frameborder="0" width="210" height="210"></iframe>
+		</div>
 	</div>
 
-	<div id="quote">
+	<div id="weather" class="container-fluid">
 
-		The Quote
 	</div>
+
+	<div id="quote" class="container-fluid">
+
+	</div>
+
 
 	<div>
-		A Todo List
-		<h1 class="text-center">WORK ON THE TODOS ONLY!
-			<ul>
-				<li><u>NOW WORK ON LINKING ALL THE APIS</u></li>
-			</ul>
 
-		</h1>
 
 		<!-- //NOTE just like in cars for the add car button make a form to take in put to make a todo card! then add the options to check off that the to do is done! -->
-		<div class="container-fluid">
-			<div class="row">
+
+
+		<div class="container-fluid d-flex">
+			<div class="row justify-content-end">
 				<!-- TODO two buttons or one? -->
-				<div class="col-ms-4 card border border-dark bg-info">
+				<div class="col-ms-12 card border border-dark b-ground">
 					<form onsubmit="app.controllers.todoController.addTodo(event)">
 						<div class="card-body">
-							<label for="text">To do?</label>
+							<label for="text"></label>
 							<h3>To do's <span id="todoCounter"></span></h3>
 							<input type="text" name="description" placeholder="whatcha wanna do?">
 						</div>
-						<button type="submit" class="btn btn-sm btn-warning btn-block border border-dark mb-1">
+						<button type="submit" class="btn btn-sm btn-warning btn-block border border-dark m-1">
 							Add Task </button>
 					</form>
 				</div>
