@@ -14,6 +14,7 @@
 
 .form-border{
   border: 1px solid black;
+  color: black;
 }
 
 .this{
@@ -23,7 +24,8 @@
 
 #bg-image{
   background-repeat: no-repeat;
-background-size: 100%;
+background-size: 100vh 100vw 100%;
+
 }
 
 .quote-card{
@@ -60,4 +62,13 @@ span{
 
 .todo-bg{
   background-color: rgba(0, 0, 0, 0.301)!important;
+  
+}
+.move-to-do {
+  height: 200px;
+  width: 200px;
+  overflow: scroll;
+  overflow-x: hidden;
+  border: 1px solid black;
+
 }
