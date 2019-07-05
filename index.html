@@ -12,17 +12,24 @@
 	<link rel="stylesheet" href="assets/css/style.css">
 </head>
 
-<body id="bg-image" class="container-fluid">
+<body id="bg-image" class="">
+	<div id="weather" class="container-fluid">
+
+	</div>
 	<div class="row justify-content-center">
 		<div class="clock">
 			<iframe
 				src="http://free.timeanddate.com/clock/i6ty2lv6/n42/szw210/szh210/hoc00f/hbw0/hfc000/cf100/hgr0/fan3/facf00/mqcff0/mql6/mqw2/mqd74/mhcf90/mhl6/mhw6/mhd74/mmcf90/mml4/mmw1/mmd74/hwm1/hhcf90/hmcf90/hsc0f0"
 				frameborder="0" width="210" height="210"></iframe>
+
 		</div>
 	</div>
+	<div class="tome text-center">
+		<h2>TANNOR! Today is the day...hopefully</h2>
 
-	<div id="weather" class="container-fluid">
-
+	</div>
+	<div class="row">
+		<div class="col-12"></div>
 	</div>
 
 	<div id="quote" class="container-fluid">
@@ -37,16 +44,16 @@
 
 
 		<div class="container-fluid d-flex">
-			<div class="row justify-content-end">
+			<div class="row justify-content-center">
 				<!-- TODO two buttons or one? -->
-				<div class="col-ms-12 card border border-dark b-ground">
+				<div class="col-ms-8 card border border-dark b-ground">
 					<form onsubmit="app.controllers.todoController.addTodo(event)">
 						<div class="card-body">
 							<label for="text"></label>
-							<h3>To do's <span id="todoCounter"></span></h3>
-							<input type="text" name="description" placeholder="whatcha wanna do?">
+							<h3 class="this">To do's <span id="todoCounter"></span></h3>
+							<input class="form-border" type="text" name="description" placeholder="whatcha wanna do?">
 						</div>
-						<button type="submit" class="btn btn-sm btn-warning btn-block border border-dark m-1">
+						<button type="submit" class="btn btn-sm btn-success btn-block border border-dark p-2">
 							Add Task </button>
 					</form>
 				</div>
@@ -55,7 +62,7 @@
 
 		<!-- <div id=" todo-error">
 		</div> -->
-		<div id="do-it-to-it"></div>
+		<div id="do-it-to-it" class="move-to-do"></div>
 	</div>
 	</div>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.js"></script>

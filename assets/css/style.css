@@ -1,9 +1,25 @@
 *{
   font-family: 'Orbitron', sans-serif;
   color: white;
+ /* margin: auto; */
+
 }
 
+.tome{
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+  color: white;
+  text-decoration: underline;
 
+}
+
+.form-border{
+  border: 1px solid black;
+}
+
+.this{
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+
+}
 
 #bg-image{
   background-repeat: no-repeat;
@@ -16,16 +32,15 @@ background-size: 100%;
   font-size: 25px;
   color:white;
   text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
- 
 }
 
 #weather{
   text-align: center;
-  background-color: rgba(0, 0, 0, 0.185)!important;
+  /* background-color: rgba(0, 0, 0, 0.301)!important; */
   text-align: end;
-  color: white;
+  /* color: white; */
   font-size: 20px;
-  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+  text-shadow: -1px -1px 0 #000, 2px -1px 0 #000, -1px 1px 0 #000, 2px 2px 0 #000;
 }
 
 .b-ground{
@@ -36,11 +51,13 @@ span{
   color: white;
   background-color: rgba(0, 0, 0, 0.301)!important;
 }
+
+
 .to-do-color{
     color: white;
-  background-color: rgba(0, 0, 0, 0.582)!important;
+  background-color: rgba(0, 0, 0, 0.301)!important;
 }
 
 .todo-bg{
-  background-color: rgba(0, 0, 0, 0.582)!important;
+  background-color: rgba(0, 0, 0, 0.301)!important;
 }

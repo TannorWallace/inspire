@@ -21,13 +21,13 @@ export default class Todo {
   <div class="row text-center ">
 	<div class=" d-flex col-ms-12">
 		<div class="card">
-			<div class="card-body todo-bg">
+			<div class="card-body todo-bg border border-dark">
       <p class="to-do-color">
       ${this.description}
       </p>
       
 
-      <button class="btn btn-sm btn-success" onclick="app.controllers.todoController.toggleTodoStatus('${this._id}')">completed?</button>
+      <button class="btn btn-sm btn-success border border-dark" onclick="app.controllers.todoController.toggleTodoStatus('${this._id}')">completed?</button>
 		
 			</div>
 		</div>
@@ -47,7 +47,7 @@ export default class Todo {
       <p class="to-do-color">
       ${this.description}s
       </p>
-      <button class="btn btn-sm btn-danger" onclick="app.controllers.todoController.removeTodo('${this._id}')">delete</button>
+      <button class="btn btn-sm btn-danger border border-dark" onclick="app.controllers.todoController.removeTodo('${this._id}')">delete</button>
 
 			</div>
 		</div>
