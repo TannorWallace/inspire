@@ -17,39 +17,39 @@ export default class Todo {
   get Template() {
     if (this.completed == false) {
       return `
-<div class="container-fluid d-flexm-2">
-  <div class="row text-center ">
-	<div class=" d-flex col-ms-12 overflow-auto">
-		<div class="card">
-			<div class="card-body todo-bg border border-dark">
-      <p class="to-do-color border border-dark">
-      ${this.description}
-      </p>
-            <button class="btn btn-sm btn-success border border-dark" onclick="app.controllers.todoController.toggleTodoStatus('${this._id}')">completed?</button>
-					</div>
-		</div>
-	</div>
-</div>
-    </div
+        <div class="container-fluid d-flex p-2">
+          <div class="row text-center ">
+	          <div class=" d-flex col-ms-12 overflow-auto">
+		          <div class="card">
+			          <div class="card-body todo-bg border border-dark">
+                  <p class="to-do-color border border-dark">
+                    ${this.description}
+                      </p>
+                         <button class="btn btn-sm btn-success border border-dark bootoon" onclick="app.controllers.todoController.toggleTodoStatus('${this._id}')">completed?</button>
+					        </div>
+		            </div>
+	            </div>
+            </div>
+          </div>
     `
 
     }
     else {
       return `
-      <div class="container-fluid d-flex m-2">
-    <div class="row text-center">
-	<div class=" d-flex col-ms-12 overflow-auto">
-		<div class="card">
-			<div class="card-body todo-bg">
-      <p class="to-do-color border border-dark">
-      ${this.description}s
-      </p>
-      <button class="btn btn-sm btn-danger border border-dark" onclick="app.controllers.todoController.removeTodo('${this._id}')">delete</button>
+      <div class="container-fluid d-flex p-2">
+        <div class="row text-center">
+	        <div class=" d-flex col-ms-12 overflow-auto">
+	        	<div class="card">
+			          <div class="card-body todo-bg border border-dark bootoon">
+                    <p class="to-do-color border border-dark">
+                         ${this.description}
+                        </p>
+                        <button class="btn btn-sm btn-danger border border-dark" onclick="app.controllers.todoController.removeTodo('${this._id}')">delete</button>
 
-			</div>
-		</div>
-	</div>
-</div>
+			             </div>
+		            </div>
+	          </div>
+          </div>
     </div>
     `
     }

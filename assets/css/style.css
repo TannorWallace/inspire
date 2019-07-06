@@ -24,13 +24,13 @@
 
 #bg-image{
   background-repeat: no-repeat;
-background-size: 100vh 100vw 100%;
+background-size: 100vh 100vw 100% cover;
 
 }
 
 .quote-card{
   text-align: center;
-  background-color: rgba(0, 0, 0, 0.301)!important;
+  background-color: transparent!important;
   font-size: 25px;
   color:white;
   text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
@@ -41,8 +41,9 @@ background-size: 100vh 100vw 100%;
   /* background-color: rgba(0, 0, 0, 0.301)!important; */
   text-align: end;
   /* color: white; */
-  font-size: 20px;
+  font-size: 30px;
   text-shadow: -1px -1px 0 #000, 2px -1px 0 #000, -1px 1px 0 #000, 2px 2px 0 #000;
+  text-decoration: underline;
 }
 
 .b-ground{
@@ -61,14 +62,32 @@ span{
 }
 
 .todo-bg{
-  background-color: rgba(0, 0, 0, 0.301)!important;
+  background-color: rgba(0, 0, 0, 0.750)!important;
   
 }
 .move-to-do {
-  height: 200px;
-  width: 200px;
+  height: 250px;
+  width: 250px;
+  word-wrap: break-word!important;
   overflow: scroll;
   overflow-x: hidden;
   border: 1px solid black;
+/* margin-bottom: 35px; */
+}
+i{
+  color: black!important;
+  
+  align-content: center;
+}
 
+.bootoon:hover{
+  
+background-color: darkorange;
+/* box-shadow: 10px 10px 10px !important; */
+}
+
+.foot .black{
+  color: black!important;
+  /* background-image: none!important; */
+  font-size: 15px;
 }
